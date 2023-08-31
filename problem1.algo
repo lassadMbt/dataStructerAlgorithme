@@ -1,0 +1,28 @@
+ALGORITHM Prablem1
+VAR
+    set1 : ARRAY_OF INTEGER[4]; 
+    set2 : ARRAY_OF INTEGER[5];
+    sum : INTEGER := 0; //Initialize sum = 0.
+    i, j: INTEGER;
+    test : BOOLEAN;
+BEGIN
+// inserting the elements directly in the array.
+    Set 1 : [3, 1, 7, 9];
+    test := true;
+    Set 2 : [2, 4, 1, 9, 3];
+     FOR i FROM 0 TO 3 DO
+       test := false; // initialize it to false
+        FOR j FROM 0 TO 4 DO
+            IF (set1[i] = set2[j]) THEN
+            test := true // initialize it to true if tha sets are equals
+            Write(set1,"and",set2,"are the same");
+            break; // Exit the inner loop since we found a match
+            END_IF
+        END_FOR
+        // if the element is not found in the second set, add it to the sum 
+        IF (test = false) THEN
+            sum := sum + set1[i];
+        END_IF
+   END_FOR
+    Write("the sum is", sum);
+END

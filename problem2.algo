@@ -1,0 +1,42 @@
+PROCEDURE dotProduct(v1,v2 ARRAY_OF INTEGER[2];)
+VAR
+    ps, i : INTEGER;
+BEGIN
+    n = v1.length; // Assuming both vectors have the same length
+    FOR i FROM 0 TO n DO
+        
+    //calculate the dot product of two vectors
+    ps = ps + v1[i] * v2[i]
+    END_FOR
+END
+
+
+      // chek if the dot product is zero (orthogonal vectors)
+PROCEDURE check_orthogonal_vectors(vectors)
+VAR
+
+BEGIN
+    n = vectors.length // Number of vector pairs
+    FOR i FROM 0 TO n DO
+
+    
+    ps = dot_product(v1, v2) // Call the dot_product procedure
+
+        IF (ps = 0) THEN
+            Write("The paire of vector are ortoghonal");
+        ELSE
+            Write("The dot product is ",ps);
+        END_IF
+
+    END_FOR
+END
+
+// function
+
+FUNCTION  dot_product(v1,v2 ARRAY_OF INTEGER[2];) : INTEGER
+VAR
+    set_declarations
+BEGIN
+    set_instructions
+    RETURN value ;
+END
